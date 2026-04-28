@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Editorial Palette */
+  --color-editorial-bg: #FFFBEB;
+  --color-editorial-ink: #2D3748;
+  --color-editorial-coral: #FF6B6B;
+  --color-editorial-teal: #4FD1C5;
+  --color-editorial-mint: #F0FFF4;
+  --color-editorial-sky: #EBF8FF;
+  --color-editorial-lavender: #FAF5FF;
+  --color-editorial-pink: #FFF5F7;
+  --color-editorial-amber: #FEF3C7;
+  
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 2.5rem;
+  --radius-huge: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-editorial-bg text-editorial-ink font-sans selection:bg-editorial-coral selection:text-white;
+  }
+}
+
+.editorial-card {
+  @apply bg-white rounded-3xl border-2 border-slate-100 shadow-lg transition-transform hover:scale-[1.02] active:scale-95;
+}
+
+.editorial-heading {
+  @apply font-black tracking-tight leading-none;
+}
+
+.isometric-btn {
+  @apply border-b-4 border-black/10 active:border-b-0 active:translate-y-1 transition-all;
+}
